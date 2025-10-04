@@ -9,4 +9,9 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  trustedOrigins: [
+    "https://localhost:3000",
+    "https://dev.portalai.in",
+    "https://portalai.in",
+  ],
 });
