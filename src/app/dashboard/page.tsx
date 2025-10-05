@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import { signOut, useSession } from "@/lib/auth-client";
 
 export default function DashboardPage() {
@@ -28,13 +29,13 @@ export default function DashboardPage() {
       <p>Welcome, {user.name || "User"}!</p>
       <p>Email: {user.email}</p>
       {/* add-start: sign out button */}
-      <button
+      <Button
         type="button"
         onClick={() => signOut()}
         className="w-full bg-white text-black font-medium rounded-md px-4 py-2 hover:bg-gray-200"
       >
         Sign Out
-      </button>
+      </Button>
     </main>
   );
 }

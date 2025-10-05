@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { signUp } from "@/lib/auth-client";
 
 export default function SignUpPage() {
@@ -55,12 +56,12 @@ export default function SignUpPage() {
           minLength={8}
           className="w-full rounded-md bg-neutral-900 border border-neutral-700 px-3 py-2"
         />
-        <button
+        <Button
           type="submit"
           className="w-full bg-white text-black font-medium rounded-md px-4 py-2 hover:bg-gray-200"
         >
           Create Account
-        </button>
+        </Button>
       </form>
     </main>
   );
